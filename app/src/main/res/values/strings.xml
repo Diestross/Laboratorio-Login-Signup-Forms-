@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Formulario</string>
+    <string-array name="roles_array">
+        <item>Ciudadano</item>
+        <item>Planeador</item>
+        <item>Decisor</item>
+    </string-array>
+</resources>
