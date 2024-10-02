@@ -6,17 +6,18 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:orientation="vertical"
-    android:padding="30dp"
     tools:context=".Signup_Form">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="30dp"
         android:fillViewport="true">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="vertical">
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/nombre"
@@ -32,10 +33,13 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:autofillHints="name"
                     android:ems="10"
-                    android:hint="Pon tu nombre completo"
+                    android:hint="@string/nombreCom_R"
                     android:inputType="text"
-                    android:textSize="20sp" />
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    tools:ignore="VisualLintTextFieldSize" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -53,10 +57,13 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:autofillHints="username"
                     android:ems="10"
-                    android:hint="Crea un nombre de usuario"
+                    android:hint="@string/userName_R"
                     android:inputType="text"
-                    android:textSize="20sp" />
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -75,10 +82,13 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:autofillHints="emailAddress"
                     android:ems="10"
-                    android:hint="Pon un e-mail"
+                    android:hint="@string/email_R"
                     android:inputType="text"
-                    android:textSize="20sp" />
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    tools:ignore="VisualLintTextFieldSize" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -96,14 +106,17 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:autofillHints="postalAddress"
                     android:ems="10"
-                    android:hint="Pon tu direccion actual"
+                    android:hint="@string/adress_R"
                     android:inputType="text"
-                    android:textSize="20sp" />
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/contraseña"
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -117,21 +130,24 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:autofillHints="password"
                     android:ems="10"
-                    android:hint="Crea una contraseña"
-                    android:inputType="text"
-                    android:textSize="20sp" />
+                    android:hint="@string/password_R"
+                    android:inputType="textPassword"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/confirmar_contraseña"
+                android:id="@+id/password_check"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
                 android:textColorHint="@color/colorAccent"
-                app:layout_constraintTop_toBottomOf="@+id/contraseña"
+                app:layout_constraintTop_toBottomOf="@+id/password"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="30dp">
 
@@ -139,9 +155,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Confirma la contraseña"
-                    android:inputType="text"
-                    android:textSize="20sp" />
+                    android:hint="@string/passwordconf_R"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <RadioGroup
@@ -150,67 +169,78 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:orientation="horizontal"
-                app:layout_constraintTop_toBottomOf="@+id/confirmar_contraseña"
+                app:layout_constraintTop_toBottomOf="@+id/password_check"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="30dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Gender: "
-                    android:textSize="20sp"></TextView>
+                    android:text="@string/gender"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="Male"
-                    android:textSize="20sp"></RadioButton>
+                    android:layout_marginStart="10dp"
+                    android:text="@string/male_R"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="Female"
-                    android:textSize="20sp"></RadioButton>
+                    android:layout_marginStart="10dp"
+                    android:text="@string/female_R"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
             </RadioGroup>
+
             <Spinner
                 android:id="@+id/spinner_rol"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                app:layout_constraintTop_toBottomOf="@+id/radioGroupGenero"
                 android:entries="@array/roles_array"
-                tools:ignore="MissingConstraints" />
+                android:minHeight="48dp"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroupGenero" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/direccion_geolocalizacion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:autofillHints=""
+                android:importantForAutofill="no"
                 app:layout_constraintTop_toBottomOf="@+id/spinner_rol">
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Latitud, Longitud"
+                    android:hint="@string/coordenadas_R"
+                    android:importantForAutofill="no"
                     android:inputType="text"
-                    android:textSize="20sp" />
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    tools:ignore="VisualLintTextFieldSize" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
+                android:id="@+id/registrarse"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_margin="40dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/button_rounded"
-                android:text="Registrarse"
+                android:text="@string/sign_up"
                 android:textColor="#FFFFFF"
-                android:textSize="22dp"
+                android:textSize="22sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioGroup"></Button>
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+                tools:ignore="VisualLintButtonSize,TextSizeCheck,TouchTargetSizeCheck" />
         </LinearLayout>
     </ScrollView>
 

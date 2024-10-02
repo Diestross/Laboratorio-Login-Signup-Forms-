@@ -1,5 +1,20 @@
 <resources>
     <string name="app_name">Formulario</string>
+    <string name="foto_perfil">Foto de Perfil</string>
+    <string name="user_L">Usuario</string>
+    <string name="password_L">Contraseña</string>
+    <string name="login">Iniciar Sesion</string>
+    <string name="sign_up">Registrarse</string>
+    <string name="gender">Genero:</string>
+    <string name="coordenadas_R">Latitud, Longitud</string>
+    <string name="nombreCom_R">Pon tu nombre completo</string>
+    <string name="userName_R">Crea un nombre de usuario</string>
+    <string name="email_R">Pon un e-mail</string>
+    <string name="adress_R">Pon tu direccion actual</string>
+    <string name="password_R">Crea una contraseña</string>
+    <string name="passwordconf_R">Confirma la contraseña</string>
+    <string name="male_R">Hombre</string>
+    <string name="female_R">Mujer</string>
     <string-array name="roles_array">
         <item>Ciudadano</item>
         <item>Planeador</item>
